@@ -1,28 +1,29 @@
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { BrowserMock } from '../product/BrowserMock'
+import { Link } from 'react-router-dom'
 import { HOME_PRODUCT_TEASER } from '../../constants/homeContent'
 import { fadeUp, staggerContainer } from '../../motion/variants'
+import { BrowserMock } from '../product/BrowserMock'
 
-export function ProductTeaserSection() {
+export function CompantIntroSection() {
   const { sitePreview, pageExamples, included } = HOME_PRODUCT_TEASER
 
   return (
     <section className="section product-teaser" aria-labelledby="teaser-heading">
       <div className="section__inner product-teaser__grid product-teaser__grid--wide">
-        <div>
+        <div className="product-teaser__copy">
           <p className="eyebrow">Our website products</p>
           <h2 id="teaser-heading" className="section__title">
-            Packaged sites — scope you can actually sign
+            Who We Are
           </h2>
-          <p className="section__lead">
-            Every SKU is a real website class: named templates, editor workflows, hosting, and go-live — not a blank
-            statement of work. Compare <strong>Website A</strong> and <strong>Website B</strong> in the catalog and open
-            the sheet that matches your job-to-be-done.
+          <p className="section__lead product-teaser__lead">
+            Engineer for Precision, Built For Compliance. At SCAS Global Digital, we believe that Quality
+            Control should not be a bottleneck or a source of human error. We were founded by engineers who
+            are tired of the "paper trail" - lost inspection sheets, manual data entry mistakes, and the
+            constant risk of using obsolete ECN revisions.
           </p>
 
           <motion.ul
-            className="checklist"
+            className="checklist checklist--center"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"

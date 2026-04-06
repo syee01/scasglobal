@@ -19,7 +19,7 @@ export function ComparisonSection() {
             Comparison
           </motion.p>
           <motion.h2 id="comparison-heading" className="section__title" variants={fadeUp}>
-            Traditional delivery vs productized websites
+            Traditional delivery vs QCX software
           </motion.h2>
           <motion.p className="section__lead" variants={fadeUp}>
             A concise view of how procurement and delivery differ when the site is scoped as a product — not an open-ended
@@ -45,7 +45,7 @@ export function ComparisonSection() {
               <thead>
                 <tr>
                   <th scope="col" className="comparison__th comparison__th--criteria">
-                    Criteria
+                    Feature
                   </th>
                   <th scope="col" className="comparison__th comparison__th--standard">
                     {existingLabel}

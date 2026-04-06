@@ -1,13 +1,13 @@
 import { ComparisonSection } from '../components/landing/ComparisonSection'
-import { HeroSection } from '../components/landing/HeroSection'
-import { ProductTeaserSection } from '../components/landing/ProductTeaserSection'
+import { MainSection } from '../components/landing/MainSection'
+import { CompantIntroSection } from '../components/landing/CompantIntroSection'
 import { TestimonialsSection } from '../components/landing/TestimonialsSection'
 
 export default function LandingPage() {
   return (
     <>
-      <HeroSection />
-      <ProductTeaserSection />
+      <MainSection />
+      <CompantIntroSection />
       <ComparisonSection />
       <TestimonialsSection />
     </>

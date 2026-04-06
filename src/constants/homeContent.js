@@ -13,47 +13,39 @@ export const HOME_PRODUCT_TEASER = {
     { name: 'Convert & comply', purpose: 'Forms, consent, and legal patterns wired for measurement.' },
   ],
   included: [
-    'Discovery, IA, and a fixed template library per product — no mystery scope',
-    'Design system and responsive front-end on a modern JavaScript stack',
-    'CMS or headless setup so marketing can publish routine updates',
-    'Staging, QA, analytics hooks, and a documented go-live',
+    'We built our platform to bridge the gap between physical measurement and digital certainly. By integrating directly with Blue tooth and USB measurement equipment, we provide a single source of truth from incoming (IQC) to Outgoing Quality control (OQC)',
+    'Our mission is to empower manufacturing teams with real time, automated data that ensure every part shipped is a part perfected. With us, you are not just buying software, you are securing your reputation and streamlining your path to ZERO- DEFECT production',
   ],
 }
 
 /** Home: typical agency / internal rebuild vs productized delivery. */
 export const SYSTEM_COMPARISON = {
-  existingLabel: 'Typical agency / project rebuild',
-  oursLabel: 'SCAS Globals (websites as a product)',
+  existingLabel: 'The old way (paper-based)',
+  oursLabel: 'QCX Software Advantage',
   rows: [
     {
-      id: 'scope',
-      dimension: 'Scope & contract',
-      existing: 'Open-ended statement of work, change orders, and “we’ll figure it out in discovery.”',
-      ours: 'Named SKUs with a fixed template library per product — boundaries you can sign.',
+      id: 'dataTransfer',
+      dimension: 'Data Transfer',
+      existing: 'Manual entry data',
+      ours: 'Bluetooth /USB direct data transfer',
     },
     {
-      id: 'timeline',
-      dimension: 'Time to first launch',
-      existing: 'Long discovery cycles, shifting priorities, and timelines that slip quarter to quarter.',
-      ours: 'Typical first launch in 4–8 weeks with clear milestones from IA to go-live.',
+      id: 'inspectionResult',
+      dimension: 'Inspection Result',
+      existing: 'Manual Judge pass / fail',
+      ours: 'Automated Certainly. System judge result against pre-set tolerances, removing human bias',
     },
     {
-      id: 'vendor',
-      dimension: 'Who does the work',
-      existing: 'Separate design, dev, and hosting partners — coordination tax on your team.',
-      ours: 'One vendor for design, build, hosting setup, QA, and documented handover.',
+      id: 'ecn',
+      dimension: 'ECN & Revision Control',
+      existing: 'Avoid outdated paper drawings or SOP mistake',
+      ours: 'Total compliances. Centralized digital control',
     },
     {
-      id: 'editing',
-      dimension: 'Day-to-day publishing',
-      existing: 'Queues of tickets for hero swaps, typos, and campaign tweaks.',
-      ours: 'CMS or headless setup so marketing ships routine updates without a dev ticket.',
-    },
-    {
-      id: 'risk',
-      dimension: 'Launch quality',
-      existing: 'Ad-hoc testing; analytics and compliance often bolted on late.',
-      ours: 'Staging, QA, analytics hooks, and a documented go-live — included in the package.',
+      id: 'storage',
+      dimension: 'Storage of records',
+      existing: 'Manual filing, handling, management effort, traceability, version control, retrieval control. Handwritten readable and analysis typing interpretation',
+      ours: 'Real time, traceability, cost and paperless saving. Analysis speed and accuracy',
     },
   ],
 }
