@@ -20,6 +20,44 @@ export const HOME_PRODUCT_TEASER = {
   ],
 }
 
+/** Home: typical agency / internal rebuild vs productized delivery. */
+export const SYSTEM_COMPARISON = {
+  existingLabel: 'Typical agency / project rebuild',
+  oursLabel: 'SCAS Globals (websites as a product)',
+  rows: [
+    {
+      id: 'scope',
+      dimension: 'Scope & contract',
+      existing: 'Open-ended statement of work, change orders, and “we’ll figure it out in discovery.”',
+      ours: 'Named SKUs with a fixed template library per product — boundaries you can sign.',
+    },
+    {
+      id: 'timeline',
+      dimension: 'Time to first launch',
+      existing: 'Long discovery cycles, shifting priorities, and timelines that slip quarter to quarter.',
+      ours: 'Typical first launch in 4–8 weeks with clear milestones from IA to go-live.',
+    },
+    {
+      id: 'vendor',
+      dimension: 'Who does the work',
+      existing: 'Separate design, dev, and hosting partners — coordination tax on your team.',
+      ours: 'One vendor for design, build, hosting setup, QA, and documented handover.',
+    },
+    {
+      id: 'editing',
+      dimension: 'Day-to-day publishing',
+      existing: 'Queues of tickets for hero swaps, typos, and campaign tweaks.',
+      ours: 'CMS or headless setup so marketing ships routine updates without a dev ticket.',
+    },
+    {
+      id: 'risk',
+      dimension: 'Launch quality',
+      existing: 'Ad-hoc testing; analytics and compliance often bolted on late.',
+      ours: 'Staging, QA, analytics hooks, and a documented go-live — included in the package.',
+    },
+  ],
+}
+
 export const TESTIMONIALS = [
   {
     id: '1',
