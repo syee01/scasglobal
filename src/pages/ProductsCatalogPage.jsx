@@ -23,9 +23,9 @@ export default function ProductsCatalogPage() {
               Websites you buy as products
             </motion.h1>
             <motion.p className="catalog-hero__lead" variants={fadeUp}>
-              Each line item below is a defined website: clear page types, editor experience, and delivery boundaries.
-              Use <strong>QCX</strong> for your flagship story and <strong>Website B</strong> for high-velocity
-              campaign and landing work — or deploy both under one relationship.
+              Each line item below is a defined website: clear page types, editor experience, and delivery boundaries.<br />
+              <strong>QCX</strong> is our packaged corporate flagship — marketing-led story, proof, and conversion
+              paths your team can operate day to day.
             </motion.p>
           </motion.div>
           <motion.div
@@ -55,8 +55,8 @@ export default function ProductsCatalogPage() {
               How we size a website engagement
             </h2>
             <p className="section__lead catalog-sizing__lead">
-              Both <strong>QCX</strong> and <strong>Website B</strong> use the same Launch / Scale / Enterprise
-              ladder. Exact ranges and template counts are on each product page — this is the shared commercial shape.
+              <strong>QCX</strong> is offered on the Launch / Scale / Enterprise ladder. Exact ranges and template
+              counts are on the product page — this is the commercial shape.
             </p>
           </div>
           <motion.ul
@@ -88,12 +88,14 @@ export default function ProductsCatalogPage() {
       <section className="section catalog-grid-section" aria-labelledby="catalog-heading">
         <div className="section__inner">
           <h2 id="catalog-heading" className="section__title catalog-grid-section__title">
-            Choose your website product
+            Your website product
           </h2>
           <p className="section__lead catalog-grid-section__intro">
-            Open a product sheet for full page lists, visitor journeys, and tier detail.
+            Open the product sheet for full page lists, visitor journeys, and tier detail.
           </p>
-          <ul className="catalog-grid">
+          <ul
+            className={`catalog-grid${PRODUCT_CATALOG.length === 1 ? ' catalog-grid--single' : ''}`}
+          >
             {PRODUCT_CATALOG.map((product, index) => (
               <motion.li
                 key={product.slug}

@@ -1,10 +1,10 @@
 /**
- * Home page copy that speaks to the full website product line, not a single SKU.
+ * Home page copy for the QCX website product.
  */
 export const HOME_PRODUCT_TEASER = {
   sitePreview: {
     urlBar: 'www.scasglobals.com',
-    caption: 'Illustrative structure — each product (A & B) has its own template library and detail page.',
+    caption: 'Illustrative structure — see the product page for the full template library and detail.',
   },
   pageExamples: [
     { name: 'Brand & story', purpose: 'Home, about, and trust — typical of a flagship corporate build.' },
@@ -33,7 +33,7 @@ export const MISSION_VISION = {
 
 export const ENQUIRY = {
   eyebrow: 'Contact',
-  title: 'Send an enquiry',
+  title: 'Send an Enquiry',
   lead: 'Share your details and we will respond by email.',
   labels: {
     name: 'Name',
@@ -61,7 +61,7 @@ export const TESTIMONIALS = [
   {
     id: '2',
     quote:
-      'Procurement cared about boundaries; our team cared about speed. SCAS Globals packaged both — flagship site plus campaign landings without two agencies.',
+      'Procurement cared about boundaries; our team cared about speed. SCAS Globals delivered a flagship site with a scope we could actually sign.',
     name: 'James Okonkwo',
     role: 'Head of Digital',
     company: 'Kitebridge Financial',
@@ -76,13 +76,13 @@ export const TESTIMONIALS = [
   },
 ]
 
-/** Shared sizing story for the catalog page (applies to QCX & B; exact $ on each SKU page). */
+/** Shared sizing story for the catalog page (exact $ on the product page). */
 export const WEBSITE_SIZING_TIERS = [
   {
     id: 'launch',
     name: 'Launch',
     summary: 'Lean footprint — one primary locale, core templates, fast time-to-value.',
-    bullets: ['Ideal for first flagship or first campaign lane', '90-day hypercare typical', 'From low five figures USD (varies by SKU)'],
+    bullets: ['Ideal for a first flagship build', '90-day hypercare typical', 'From low five figures USD (see product page)'],
   },
   {
     id: 'scale',
@@ -95,6 +95,6 @@ export const WEBSITE_SIZING_TIERS = [
     id: 'enterprise',
     name: 'Enterprise',
     summary: 'Governance, security coordination, and SLAs for global or regulated programs.',
-    bullets: ['Dedicated squad & response targets', 'Multi-brand or paired A + B rollouts', 'Custom commercial — talk to us'],
+    bullets: ['Dedicated squad & response targets', 'Multi-brand or multi-site rollouts', 'Custom commercial — talk to us'],
   },
 ]

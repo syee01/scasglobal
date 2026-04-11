@@ -16,7 +16,7 @@ export function MainSection() {
             Web-based QMS for manufacturers
           </motion.p>
           <motion.h1 id="hero-heading" className="hero__title" variants={fadeUp}>
-            Eliminate the clipboard. Automate the insight
+            Eliminate the Clipboard. Automate the Insight
           </motion.h1>
           <motion.p className="hero__lead" variants={fadeUp}>
             The integrated QC platform with real-time Bluetooth data capture. Transform your factory floor with

@@ -1,10 +1,9 @@
 /**
- * Product catalog: each entry is a sellable website product (QCX & B are both live SKUs).
+ * Product catalog: sellable website product (QCX).
  */
 
 export const PRODUCT_SLUGS = {
   WEBSITE_A: 'website-a',
-  WEBSITE_B: 'website-b',
 }
 
 /** @typedef {'available' | 'coming-soon'} ProductStatus */
@@ -33,19 +32,6 @@ export const PRODUCT_CATALOG = [
       'Marketing-led corporate site with clear story, proof points, and conversion paths. Built so your team can publish without developers for day-to-day updates.',
     heroImage:
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80',
-  },
-  {
-    id: 'website-b',
-    slug: PRODUCT_SLUGS.WEBSITE_B,
-    name: 'Website B',
-    shortLabel: 'Campaign & landing system',
-    status: 'available',
-    tagline:
-      'A packaged site for launches, demand gen, and always-on campaigns — repeatable landing patterns with governance.',
-    cardSummary:
-      'Purpose-built for growth and product marketing: fast landings, thank-you flows, resources, and events — same product discipline as QCX, different page library.',
-    heroImage:
-      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600&q=80',
   },
 ]
 
@@ -185,152 +171,12 @@ export const WEBSITE_A_DETAIL = {
   ],
 }
 
-/**
- * Rich detail for Website B — campaign / landing product (live SKU).
- */
-export const WEBSITE_B_DETAIL = {
-  slug: PRODUCT_SLUGS.WEBSITE_B,
-  whatItIs: {
-    title: 'What Website B is',
-    lead:
-      'Website B is a second productized website: focused on campaign velocity and conversion paths, not a full corporate IA. You get a library of landing and funnel templates, shared design tokens with your brand, and the same hosting and release rigor as QCX.',
-    bullets: [
-      'Campaign-first pages: launches, paid media destinations, webinars, and partner promos',
-      'Reusable blocks and templates so marketing can spin up new landings without bespoke quotes',
-      'Hosting, SSL, analytics events, and consent defaults included in the product boundary',
-    ],
-  },
-  audience: {
-    title: 'Who it fits',
-    items: [
-      {
-        title: 'Demand gen & performance marketing',
-        text: 'Many landings, clear UTMs, thank-you and nurture handoffs, fast iteration.',
-      },
-      {
-        title: 'Product marketing & launches',
-        text: 'Release moments, comparison pages, demo request flows, and changelog-style updates.',
-      },
-      {
-        title: 'Teams that already run QCX',
-        text: 'Pair flagship story (A) with high-velocity campaign surfaces (B) under one vendor.',
-      },
-    ],
-  },
-  sitePreview: {
-    urlBar: 'go.yourcompany.com',
-    caption: 'Typical use: dedicated campaign host or path — IA finalized in discovery.',
-  },
-  pageStructure: {
-    title: 'Pages & templates you get',
-    description:
-      'Building blocks for Website B. Copy, creative, and audience segments are yours; we wire templates, forms, and measurement.',
-    pages: [
-      { name: 'Primary landing', purpose: 'Hero, proof, single CTA, optional social proof strip.' },
-      { name: 'Thank you / confirmation', purpose: 'Next-step content, calendar embeds, or asset delivery.' },
-      { name: 'Resource / content offer', purpose: 'Gated or open PDF/video pages with form variants.' },
-      { name: 'Event & webinar', purpose: 'Agenda, speakers, registration, and replay placeholder.' },
-      { name: 'Compare / challenger', purpose: 'Structured comparison tables and objection handling.' },
-      { name: 'Legal & campaign footer', purpose: 'Privacy, terms, and disclosure patterns for ads compliance.' },
-    ],
-  },
-  visitorJourneys: {
-    title: 'What visitors experience',
-    journeys: [
-      {
-        title: 'Click → land',
-        text: 'Sub-second perceived load, message match to ad/creative, mobile-first layouts.',
-      },
-      {
-        title: 'Engage → convert',
-        text: 'Short forms, progressive profiling options, and CRM-ready field mapping.',
-      },
-      {
-        title: 'Measure → learn',
-        text: 'Event taxonomy agreed up front; optional experimentation hooks on higher tiers.',
-      },
-    ],
-  },
-  editorExperience: {
-    title: 'What your team operates',
-    items: [
-      'Clone-and-edit landing patterns instead of one-off HTML dumps',
-      'Optional scheduling and sunsetting reminders for time-bound campaigns',
-      'Editor handover with naming conventions for UTMs and content slots',
-    ],
-  },
-  techQuality: {
-    title: 'Engineering & quality bar',
-    items: [
-      'Same modern JS stack and component discipline as QCX for brand consistency',
-      'Core Web Vitals discussed per template; image CDN and lazy loading defaults',
-      'Accessibility patterns for forms and key flows; extended audit available',
-    ],
-  },
-  included: [
-    'Discovery workshop focused on campaigns, audiences, and measurement for Website B',
-    'UX/UI patterns aligned to your brand (can inherit tokens from QCX if both purchased)',
-    'Responsive build, CMS or headless setup, and form integration',
-    'Analytics event plan, consent tooling, and QA before each major launch wave',
-    'Staging, rollout checklist, and editor training for repeatable landings',
-  ],
-  tiers: [
-    {
-      id: 'launch',
-      name: 'Launch',
-      blurb: 'One primary campaign lane, core template set, single locale.',
-      priceHint: 'From USD 9k',
-      features: [
-        'Up to 6 templates from the Website B library',
-        'Two launch waves supported in first 90 days',
-        'Monthly conversion snapshot',
-      ],
-    },
-    {
-      id: 'scale',
-      name: 'Scale',
-      blurb: 'Multiple concurrent campaigns, locales, and CRM depth.',
-      priceHint: 'From USD 22k',
-      highlighted: true,
-      features: [
-        'Everything in Launch',
-        'Expanded template set & locale variants',
-        'MAP/CRM custom object hooks & server-side events',
-        'Quarterly experimentation review',
-      ],
-    },
-    {
-      id: 'enterprise',
-      name: 'Enterprise',
-      blurb: 'Global programs, governance, and SLAs across A + B.',
-      priceHint: 'Custom',
-      features: [
-        'Dedicated squad & response targets',
-        'Security review coordination',
-        'Joint roadmap with QCX where both are deployed',
-        'Optional 24/7 coverage',
-      ],
-    },
-  ],
-  slaPoints: [
-    { title: 'Uptime target', detail: '99.9% on SCAS-managed hosting tiers for Website B' },
-    { title: 'Support', detail: 'Business hours included; extended coverage on Enterprise' },
-    { title: 'Releases', detail: 'Versioned deploys with rollback; hotfix path for campaign emergencies' },
-  ],
-}
-
 export function getCatalogItemBySlug(slug) {
   return PRODUCT_CATALOG.find((p) => p.slug === slug) ?? null
 }
 
 export function getProductDetail(slug) {
-  if (slug === PRODUCT_SLUGS.WEBSITE_A) {
-    const catalog = getCatalogItemBySlug(slug)
-    return catalog ? { catalog, detail: WEBSITE_A_DETAIL } : null
-  }
-  if (slug === PRODUCT_SLUGS.WEBSITE_B) {
-    const catalog = getCatalogItemBySlug(slug)
-    return catalog ? { catalog, detail: WEBSITE_B_DETAIL } : null
-  }
-  return null
+  if (slug !== PRODUCT_SLUGS.WEBSITE_A) return null
+  const catalog = getCatalogItemBySlug(slug)
+  return catalog ? { catalog, detail: WEBSITE_A_DETAIL } : null
 }

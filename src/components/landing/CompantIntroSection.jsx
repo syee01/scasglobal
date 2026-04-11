@@ -13,7 +13,7 @@ export function CompantIntroSection() {
         <div className="product-teaser__copy">
           <p className="eyebrow">About us</p>
           <h2 id="teaser-heading" className="section__title">
-            Built for quality and compliance teams
+            Built for Quality and Compliance Teams
           </h2>
           <p className="section__lead product-teaser__lead">
             Engineer for Precision, Built For Compliance. At SCAS Global Digital, we believe that Quality

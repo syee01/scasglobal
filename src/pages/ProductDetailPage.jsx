@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ComparisonSection } from '../components/landing/ComparisonSection'
 import { BrowserMock } from '../components/product/BrowserMock'
 import { CONTACT } from '../constants/site'
-import { getProductDetail, PRODUCT_SLUGS } from '../constants/products'
+import { getProductDetail } from '../constants/products'
 import { fadeUp, staggerContainer } from '../motion/variants'
 
 export default function ProductDetailPage() {
@@ -147,7 +147,7 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-      {slug === PRODUCT_SLUGS.WEBSITE_A ? <ComparisonSection /> : null}
+      <ComparisonSection />
 
       <section className="section product-site-visual" aria-labelledby="structure-heading">
         <div className="section__inner product-site-visual__grid">
