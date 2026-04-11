@@ -11,9 +11,9 @@ export function CompantIntroSection() {
     <section className="section product-teaser" aria-labelledby="teaser-heading">
       <div className="section__inner product-teaser__grid product-teaser__grid--wide">
         <div className="product-teaser__copy">
-          <p className="eyebrow">Our website products</p>
+          <p className="eyebrow">About us</p>
           <h2 id="teaser-heading" className="section__title">
-            Who We Are
+            Built for quality and compliance teams
           </h2>
           <p className="section__lead product-teaser__lead">
             Engineer for Precision, Built For Compliance. At SCAS Global Digital, we believe that Quality
@@ -54,7 +54,7 @@ export function CompantIntroSection() {
 
         <BrowserMock urlBar={sitePreview.urlBar} className="product-teaser__mock">
           <p className="browser-mock__intro">
-            Illustrative mix of what our website products cover — each product has its own template library and pricing
+            Illustrative mix of what our web products cover — each product has its own template library and pricing
             tiers on the detail page.
           </p>
           <ul className="browser-mock__sitemap">

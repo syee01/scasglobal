@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { COMPANY, PRIMARY_NAV } from '../../constants/site'
 
@@ -12,16 +12,39 @@ function navLinkClass({ isActive }) {
  */
 export function Header({ variant = 'catalog' }) {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
 
   const linkList = (
     <>
-      {PRIMARY_NAV.map(({ to, label, end }) => (
-        <li key={to}>
-          <NavLink to={to} end={end} className={navLinkClass} onClick={() => setMobileOpen(false)}>
-            {label}
-          </NavLink>
-        </li>
-      ))}
+      {PRIMARY_NAV.map((item) => {
+        const { label, to, end, hash } = item
+        if (hash) {
+          const active = location.pathname === '/' && location.hash === `#${hash}`
+          return (
+            <li key={label}>
+              <Link
+                to={{ pathname: '/', hash }}
+                className={`nav-pro__link${active ? ' nav-pro__link--active' : ''}`}
+                onClick={() => {
+                  setMobileOpen(false)
+                  if (location.pathname === '/' && location.hash === `#${hash}`) {
+                    document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+              >
+                {label}
+              </Link>
+            </li>
+          )
+        }
+        return (
+          <li key={to}>
+            <NavLink to={to} end={end} className={navLinkClass} onClick={() => setMobileOpen(false)}>
+              {label}
+            </NavLink>
+          </li>
+        )
+      })}
     </>
   )
 

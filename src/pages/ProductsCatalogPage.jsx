@@ -24,7 +24,7 @@ export default function ProductsCatalogPage() {
             </motion.h1>
             <motion.p className="catalog-hero__lead" variants={fadeUp}>
               Each line item below is a defined website: clear page types, editor experience, and delivery boundaries.
-              Use <strong>Website A</strong> for your flagship story and <strong>Website B</strong> for high-velocity
+              Use <strong>QCX</strong> for your flagship story and <strong>Website B</strong> for high-velocity
               campaign and landing work — or deploy both under one relationship.
             </motion.p>
           </motion.div>
@@ -55,7 +55,7 @@ export default function ProductsCatalogPage() {
               How we size a website engagement
             </h2>
             <p className="section__lead catalog-sizing__lead">
-              Both <strong>Website A</strong> and <strong>Website B</strong> use the same Launch / Scale / Enterprise
+              Both <strong>QCX</strong> and <strong>Website B</strong> use the same Launch / Scale / Enterprise
               ladder. Exact ranges and template counts are on each product page — this is the shared commercial shape.
             </p>
           </div>

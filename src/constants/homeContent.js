@@ -3,7 +3,7 @@
  */
 export const HOME_PRODUCT_TEASER = {
   sitePreview: {
-    urlBar: 'www.yourcompany.com',
+    urlBar: 'www.scasglobals.com',
     caption: 'Illustrative structure — each product (A & B) has its own template library and detail page.',
   },
   pageExamples: [
@@ -13,41 +13,40 @@ export const HOME_PRODUCT_TEASER = {
     { name: 'Convert & comply', purpose: 'Forms, consent, and legal patterns wired for measurement.' },
   ],
   included: [
-    'We built our platform to bridge the gap between physical measurement and digital certainly. By integrating directly with Blue tooth and USB measurement equipment, we provide a single source of truth from incoming (IQC) to Outgoing Quality control (OQC)',
-    'Our mission is to empower manufacturing teams with real time, automated data that ensure every part shipped is a part perfected. With us, you are not just buying software, you are securing your reputation and streamlining your path to ZERO- DEFECT production',
+    'We built our platform to bridge physical measurement and digital certainty. By integrating directly with Bluetooth and USB measurement equipment, we provide a single source of truth from incoming (IQC) to outgoing quality control (OQC).',
+    'We empower manufacturing teams with real-time, automated data so every shipment is backed by traceable inspection records—supporting your path toward zero-defect production and stronger ISO-aligned documentation.',
   ],
 }
 
-/** Home: typical agency / internal rebuild vs productized delivery. */
-export const SYSTEM_COMPARISON = {
-  existingLabel: 'The old way (paper-based)',
-  oursLabel: 'QCX Software Advantage',
-  rows: [
-    {
-      id: 'dataTransfer',
-      dimension: 'Data Transfer',
-      existing: 'Manual entry data',
-      ours: 'Bluetooth /USB direct data transfer',
-    },
-    {
-      id: 'inspectionResult',
-      dimension: 'Inspection Result',
-      existing: 'Manual Judge pass / fail',
-      ours: 'Automated Certainly. System judge result against pre-set tolerances, removing human bias',
-    },
-    {
-      id: 'ecn',
-      dimension: 'ECN & Revision Control',
-      existing: 'Avoid outdated paper drawings or SOP mistake',
-      ours: 'Total compliances. Centralized digital control',
-    },
-    {
-      id: 'storage',
-      dimension: 'Storage of records',
-      existing: 'Manual filing, handling, management effort, traceability, version control, retrieval control. Handwritten readable and analysis typing interpretation',
-      ours: 'Real time, traceability, cost and paperless saving. Analysis speed and accuracy',
-    },
+export const MISSION_VISION = {
+  sectionEyebrow: 'Purpose',
+  beliefTitle: 'Empowering Quality Through Connection and Insight',
+  beliefParagraphs: [
+    "As SCAS Global Digital, we believe quality is not just a standard — it's a living connection between people, processes, and technology. Our QC software bridges these elements by delivering real-time automated data, enabling manufacturing teams to make insight-driven decisions that enhance precision, efficiency, and trust.",
+    'Through seamless integration and intelligent analytics, we transform data into actionable insight — empowering every connection to produce measurable quality.',
   ],
+  mission:
+    'To empower businesses with intelligent quality software solutions that connect insight, precision and performance.',
+  vision:
+    'To be the trusted global partner in digital quality transformation, inspiring sustainable growth through technology and human connection.',
+}
+
+export const ENQUIRY = {
+  eyebrow: 'Contact',
+  title: 'Send an enquiry',
+  lead: 'Share your details and we will respond by email.',
+  labels: {
+    name: 'Name',
+    email: 'Email',
+    contact: 'Contact number',
+    country: 'Country code',
+    phone: 'Phone number',
+    company: 'Company',
+    comment: 'Comment',
+  },
+  submit: 'Submit enquiry',
+  success:
+    'Your email app should open with a draft. If it does not, reach us at hello@scasglobals.com.',
 }
 
 export const TESTIMONIALS = [
@@ -77,7 +76,7 @@ export const TESTIMONIALS = [
   },
 ]
 
-/** Shared sizing story for the catalog page (applies to Website A & B; exact $ on each SKU page). */
+/** Shared sizing story for the catalog page (applies to QCX & B; exact $ on each SKU page). */
 export const WEBSITE_SIZING_TIERS = [
   {
     id: 'launch',

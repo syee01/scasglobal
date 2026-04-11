@@ -11,14 +11,18 @@ export const COMPANY = {
 
 export const CONTACT = {
   email: 'hello@scasglobals.com',
-  phone: '+1 (555) 010-2048',
-  addressLine1: '88 Marina Bay Business District',
-  addressLine2: 'Singapore 018956',
-  hours: 'Mon–Fri, 9:00–18:00 (SGT)',
+  phone: '',
+  addressLine1: '1171, Babak Moti, Sungai Bakap',
+  addressLine2: '14200, Penang, Malaysia',
+  hours: 'Mon-Fri, 9:00-18:00 (MYT)',
 }
 
-/** Flat primary navigation — product SKUs live under /products only. */
+/**
+ * Primary navigation — product SKUs live under /products only.
+ * Items with `hash` scroll to that id on the home page (`/#enquiry`).
+ */
 export const PRIMARY_NAV = [
   { to: '/', label: 'Home', end: true },
   { to: '/products', label: 'Products', end: true },
+  { to: '/', label: 'Contact', hash: 'enquiry' },
 ]

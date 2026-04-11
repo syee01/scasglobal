@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { SYSTEM_COMPARISON } from '../../constants/homeContent'
+import { SYSTEM_COMPARISON } from '../../constants/systemComparison'
 import { fadeUp, staggerContainer } from '../../motion/variants'
 
 export function ComparisonSection() {
