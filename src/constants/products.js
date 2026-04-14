@@ -1,3 +1,5 @@
+import qcxImage from '../assets/QCX.png'
+
 /**
  * Product catalog: sellable website product (QCX).
  */
@@ -30,8 +32,7 @@ export const PRODUCT_CATALOG = [
     tagline: 'A complete company website — pages, content model, and launch in one product.',
     cardSummary:
       'Marketing-led corporate site with clear story, proof points, and conversion paths. Built so your team can publish without developers for day-to-day updates.',
-    heroImage:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80',
+    heroImage: qcxImage,
   },
 ]
 

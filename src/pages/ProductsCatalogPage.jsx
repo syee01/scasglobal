@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { CATALOG_HERO_IMAGE } from '../constants/catalogAssets'
 import { PRODUCT_CATALOG } from '../constants/products'
 import { WEBSITE_SIZING_TIERS } from '../constants/homeContent'
 import { fadeUp, staggerContainer } from '../motion/variants'
@@ -9,7 +8,7 @@ export default function ProductsCatalogPage() {
   return (
     <article className="catalog-page">
       <header className="catalog-hero catalog-hero--split section">
-        <div className="section__inner catalog-hero__split">
+        <div className="section__inner catalog-hero__split catalog-hero__split--text-only">
           <motion.div
             className="catalog-hero__copy"
             variants={staggerContainer}
@@ -23,26 +22,11 @@ export default function ProductsCatalogPage() {
               Websites you buy as products
             </motion.h1>
             <motion.p className="catalog-hero__lead" variants={fadeUp}>
-              Each line item below is a defined website: clear page types, editor experience, and delivery boundaries.<br />
               <strong>QCX</strong> is our packaged corporate flagship — marketing-led story, proof, and conversion
-              paths your team can operate day to day.
+              paths your team can operate day to day. It is designed for teams that need a professional digital
+              presence with structured content flow, consistent design, and practical launch readiness without
+              rebuilding from scratch.
             </motion.p>
-          </motion.div>
-          <motion.div
-            className="catalog-hero__figure"
-            initial={{ opacity: 0, x: 16 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.55, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className="catalog-hero__figure-frame">
-              <img
-                src={CATALOG_HERO_IMAGE}
-                alt="Design workspace with layout sketches and interface mockups"
-                width={720}
-                height={540}
-                loading="eager"
-              />
-            </div>
           </motion.div>
         </div>
       </header>
@@ -88,7 +72,7 @@ export default function ProductsCatalogPage() {
       <section className="section catalog-grid-section" aria-labelledby="catalog-heading">
         <div className="section__inner">
           <h2 id="catalog-heading" className="section__title catalog-grid-section__title">
-            Your website product
+            Our website product
           </h2>
           <p className="section__lead catalog-grid-section__intro">
             Open the product sheet for full page lists, visitor journeys, and tier detail.
@@ -112,6 +96,7 @@ export default function ProductsCatalogPage() {
                   ) : null}
                 </div>
                 <div className="catalog-card__body">
+                  {product.status === 'coming-soon' ? <span className="catalog-card__badge">Coming soon</span> : null}
                   <p className="catalog-card__label">{product.shortLabel}</p>
                   <h3 className="catalog-card__name">{product.name}</h3>
                   <p className="catalog-card__summary">{product.cardSummary}</p>

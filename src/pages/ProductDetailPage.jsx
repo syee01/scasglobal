@@ -5,6 +5,12 @@ import { BrowserMock } from '../components/product/BrowserMock'
 import { CONTACT } from '../constants/site'
 import { getProductDetail } from '../constants/products'
 import { fadeUp, staggerContainer } from '../motion/variants'
+import homePage from '../assets/homePage.png'
+import engineeringSetupPage from '../assets/engineeringSetupPage.png'
+import qcInspectionHeader from '../assets/qcInspectionHeader.png'
+import qcInspectionPage from '../assets/qcInspectionPage.png'
+import resultPageHeader from '../assets/resultPageHeader.png'
+import resultPage from '../assets/resultPage.png'
 
 export default function ProductDetailPage() {
   const { slug } = useParams()
@@ -72,6 +78,22 @@ export default function ProductDetailPage() {
   }
 
   const d = detail
+  const isQcx = catalog.name === 'QCX'
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.1 },
+    },
+  }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+  }
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.9, x: 20 },
+    visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+  }
 
   return (
     <article className="product-page">
@@ -119,6 +141,189 @@ export default function ProductDetailPage() {
           </motion.div>
         </div>
       </header>
+
+      {isQcx ? (
+        <section className="qcx-feature-suite" aria-labelledby="qcx-feature-story-heading">
+          <div className="section__inner">
+            <motion.div
+              className="section__header qcx-feature-suite__header"
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <p className="eyebrow">QCX Product Features</p>
+              <h2 id="qcx-feature-story-heading" className="section__title">
+               
+              </h2>
+            </motion.div>
+
+            <div className="qcx-stage-list">
+              <motion.article
+                className="qcx-stage-card"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-100px' }}
+              >
+                <div className="qcx-stage-card__copy">
+                  <motion.h3 variants={itemVariants} className="qcx-stage-card__title">
+                    From Engineering Definition to Automatic QC Judgment — One Integrated QC Database
+                  </motion.h3>
+                  <motion.p variants={itemVariants} className="qcx-stage-card__lead">
+                    Digitize inspection planning, drawing mark-ups, data capture Bluetooth technology, USB type,
+                    manual cosmetic, and ECN control in one paperless quality control platform.
+                  </motion.p>
+                  <motion.div variants={itemVariants} className="qcx-stage-card__group">
+                    <p className="qcx-stage-card__group-title">One Platform. Complete Quality Flow.</p>
+                    <p className="qcx-stage-card__group-text">
+                      Engineering Setup → Inspection Plan → Drawing Mark-Up → QC Execution → Auto Judgment → Reports
+                    </p>
+                  </motion.div>
+                  <motion.ul variants={itemVariants} className="qcx-stage-card__list">
+                    <li>Role-based modules</li>
+                    <li>Professional, auditable system</li>
+                    <li>Not Excel, not paper, not ad-hoc</li>
+                  </motion.ul>
+                </div>
+
+                <motion.div className="qcx-stage-card__media" variants={imageVariants} whileHover={{ scale: 1.06 }}>
+                  <img src={homePage} alt="QCX home page workflow preview" loading="lazy" />
+                </motion.div>
+              </motion.article>
+
+              <motion.article
+                className="qcx-stage-card qcx-stage-card--reverse"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-100px' }}
+              >
+                <div className="qcx-stage-card__copy">
+                  <motion.h3 variants={itemVariants} className="qcx-stage-card__title">
+                    Quality consistency starts with engineering discipline
+                  </motion.h3>
+                  <motion.p variants={itemVariants} className="qcx-stage-card__group-title">
+                    Flexible Data Entry from Shop Floor
+                  </motion.p>
+                  <motion.p variants={itemVariants} className="qcx-stage-card__group-text">
+                    Description Supports multiple inspection methods for real production environments.
+                  </motion.p>
+                  <motion.div variants={itemVariants} className="qcx-stage-card__group">
+                    <p className="qcx-stage-card__group-title">Supported methods</p>
+                    <ul className="qcx-stage-card__sublist">
+                      <li>Bluetooth caliper & micrometer</li>
+                      <li>Manual numeric entry</li>
+                      <li>Go / No-Go & form-fit jig result</li>
+                      <li>Cosmetic / visual inspection (OK / NG)</li>
+                    </ul>
+                  </motion.div>
+                  <motion.ul variants={itemVariants} className="qcx-stage-card__list">
+                    <li>Centralized master control by Engineering</li>
+                  </motion.ul>
+                </div>
+
+                <motion.div className="qcx-stage-card__media" variants={imageVariants} whileHover={{ scale: 1.06 }}>
+                  <img src={engineeringSetupPage} alt="Engineering setup page in QCX" loading="lazy" />
+                </motion.div>
+              </motion.article>
+
+              <motion.article
+                className="qcx-stage-card"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-100px' }}
+              >
+                <div className="qcx-stage-card__copy">
+                  <motion.h3 variants={itemVariants} className="qcx-stage-card__title">
+                    Part & Process Master Setup Inspection Plan
+                  </motion.h3>
+                  <motion.ul variants={itemVariants} className="qcx-stage-card__list">
+                    <li>Supports structured ECN workflow</li>
+                    <li>Prevents uncontrolled inspection changes</li>
+                  </motion.ul>
+                  <motion.div variants={itemVariants} className="qcx-stage-card__group">
+                    <p className="qcx-stage-card__group-text">
+                      Upload approved drawings (PDF) and linked directly to the inspection plan to use later for inspection point mark-up and reference
+                    </p>
+                  </motion.div>
+                  <motion.div variants={itemVariants} className="qcx-stage-card__group">
+                    <p className="qcx-stage-card__group-title">Engineers define each inspection point with:</p>
+                    <ul className="qcx-stage-card__sublist">
+                      <li>Location : Mark up</li>
+                      <li>Feature : Length /Width/Hole to Hole</li>
+                      <li>Inspection type : Dimension/ Functional/Cosmetic</li>
+                      <li>Equipment :Caliper/Micrometer/Jig / Go-No-Go</li>
+                      <li>Nominal and tolerance. Auto in USL, LSL QC screen</li>
+                    </ul>
+                  </motion.div>
+                </div>
+                <motion.div
+                  className="qcx-stage-card__media qcx-stage-card__media--combined"
+                  variants={imageVariants}
+                  whileHover={{ scale: 1.06 }}
+                >
+                  <div className="qcx-stage-card__combined-grid">
+                    <div className="qcx-stage-card__combined-item">
+                      <img src={qcInspectionHeader} alt="Inspection plan header flow in QCX" loading="lazy" />
+                    </div>
+                    <div className="qcx-stage-card__combined-item">
+                      <img src={qcInspectionPage} alt="QC inspection point definition page" loading="lazy" />
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.article>
+
+              <motion.article
+                className="qcx-stage-card qcx-stage-card--reverse"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-100px' }}
+              >
+                <div className="qcx-stage-card__copy">
+                  <motion.h3 variants={itemVariants} className="qcx-stage-card__title">
+                    QC Data entry and Inspection Result
+                  </motion.h3>
+                  <motion.p variants={itemVariants} className="qcx-stage-card__group-title">
+                    Flexible Data Entry from Shop Floor
+                  </motion.p>
+                  <motion.p variants={itemVariants} className="qcx-stage-card__group-text">
+                    Description Supports multiple inspection methods for real production environments.
+                  </motion.p>
+                  <motion.div variants={itemVariants} className="qcx-stage-card__group">
+                    <p className="qcx-stage-card__group-title">Supported methods</p>
+                    <ul className="qcx-stage-card__sublist">
+                      <li>Bluetooth caliper & micrometer direct data transfer. No typo errors.</li>
+                      <li>Manual numeric entry for pin gage or non Bluetooth or USB technology</li>
+                      <li>Go / No-Go & form-fit jig result</li>
+                      <li>Cosmetic / visual inspection (OK / NG)</li>
+                    </ul>
+                  </motion.div>
+                  <motion.ul variants={itemVariants} className="qcx-stage-card__list">
+                    <li>Drawing Upload & Mark-Up</li>
+                    <li>Visual Quality Definition — No Interpretation</li>
+                  </motion.ul>
+                </div>
+                <motion.div
+                  className="qcx-stage-card__media qcx-stage-card__media--combined"
+                  variants={imageVariants}
+                  whileHover={{ scale: 1.06 }}
+                >
+                  <div className="qcx-stage-card__combined-grid">
+                    <div className="qcx-stage-card__combined-item">
+                      <img src={resultPageHeader} alt="QC data entry header in QCX" loading="lazy" />
+                    </div>
+                    <div className="qcx-stage-card__combined-item">
+                      <img src={resultPage} alt="QC result page with drawing mark-up" loading="lazy" />
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.article>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section product-context" aria-labelledby="what-heading">
         <div className="section__inner product-context__grid">
