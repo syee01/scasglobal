@@ -29,9 +29,9 @@ export const PRODUCT_CATALOG = [
     name: 'QCX',
     shortLabel: 'Corporate flagship site',
     status: 'available',
-    tagline: 'A complete company website — pages, content model, and launch in one product.',
+    tagline: 'Precision Quality Control, Automated and Connected',
     cardSummary:
-      'Marketing-led corporate site with clear story, proof points, and conversion paths. Built so your team can publish without developers for day-to-day updates.',
+      'QCX is the packaged corporate flagship-marketing-led story, proof and conversion paths your team can operate day-today. It is designed for teams that need direct data acquisition, precise engineering control and full digital traceability without building from scratch',
     heroImage: qcxImage,
   },
 ]
@@ -41,17 +41,6 @@ export const PRODUCT_CATALOG = [
  */
 export const WEBSITE_A_DETAIL = {
   slug: PRODUCT_SLUGS.WEBSITE_A,
-  /** Plain-language: what you are buying */
-  whatItIs: {
-    title: 'What QCX is',
-    lead:
-      'QCX is not a vague “digital project.” It is a finished class of website: a public marketing and trust site that explains who you are, what you sell, and how to engage — with a structure we have already productized.',
-    bullets: [
-      'Responsive public site (desktop, tablet, phone) under your brand',
-      'Editorial workflow: drafts, review, and publish without touching code for routine updates',
-      'Hosting, SSL, backups, and release process included in the product boundary',
-    ],
-  },
   audience: {
     title: 'Who it fits',
     items: [
@@ -74,19 +63,6 @@ export const WEBSITE_A_DETAIL = {
     urlBar: 'www.yourcompany.com',
     caption: 'Example structure — final IA is tuned in discovery.',
   },
-  pageStructure: {
-    title: 'Pages & sections you get',
-    description:
-      'These are the building blocks of QCX. Copy and media are yours; we implement templates, components, and CMS wiring.',
-    pages: [
-      { name: 'Home', purpose: 'Positioning, key CTAs, highlights, and trust signals.' },
-      { name: 'Solutions / Services', purpose: 'Grouped offers with scannable detail and deep links.' },
-      { name: 'About & leadership', purpose: 'Story, milestones, and credibility (team, offices, values).' },
-      { name: 'Insights / News', purpose: 'Articles or releases with listing, tags, and article layout.' },
-      { name: 'Careers (optional)', purpose: 'Employer story + link-out or embedded list, tier-dependent.' },
-      { name: 'Contact & legal', purpose: 'Forms or mailto paths, privacy, terms, accessibility statement.' },
-    ],
-  },
   visitorJourneys: {
     title: 'What visitors experience',
     journeys: [
@@ -102,22 +78,6 @@ export const WEBSITE_A_DETAIL = {
         title: 'Return → recall',
         text: 'Stable URLs, SEO metadata, and shareable pages for campaigns and outbound.',
       },
-    ],
-  },
-  editorExperience: {
-    title: 'What your team operates',
-    items: [
-      'Structured content types (e.g. hero, cards, FAQs) instead of fragile free-form HTML',
-      'Preview on staging before publish; rollback-friendly releases when paired with Enterprise tier',
-      'Handover: short Loom-style walkthrough + written runbook for editors',
-    ],
-  },
-  techQuality: {
-    title: 'Engineering & quality bar',
-    items: [
-      'Modern JavaScript front-end (e.g. React-based) with component library aligned to design tokens',
-      'Performance budget discussed up front; image and font strategy documented',
-      'Accessibility-minded patterns; formal audit scope can be added for regulated industries',
     ],
   },
   included: [

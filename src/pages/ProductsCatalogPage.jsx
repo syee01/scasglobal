@@ -22,10 +22,9 @@ export default function ProductsCatalogPage() {
               Websites you buy as products
             </motion.h1>
             <motion.p className="catalog-hero__lead" variants={fadeUp}>
-              <strong>QCX</strong> is our packaged corporate flagship — marketing-led story, proof, and conversion
-              paths your team can operate day to day. It is designed for teams that need a professional digital
-              presence with structured content flow, consistent design, and practical launch readiness without
-              rebuilding from scratch.
+              Our website products give teams a ready-to-launch digital presence with clear messaging, reusable
+              content blocks, and conversion-focused journeys. Each package is built to be scalable and easy to
+              operate, so you can launch faster without rebuilding everything from scratch.
             </motion.p>
           </motion.div>
         </div>
@@ -34,13 +33,13 @@ export default function ProductsCatalogPage() {
       <section className="section catalog-sizing" aria-labelledby="sizing-heading">
         <div className="section__inner">
           <div className="section__header">
-            <p className="eyebrow">Sizing</p>
+            <p className="eyebrow">Tiers</p>
             <h2 id="sizing-heading" className="section__title">
-              How we size a website engagement
+              Digital Quality Control Precision 
             </h2>
             <p className="section__lead catalog-sizing__lead">
-              <strong>QCX</strong> is offered on the Launch / Scale / Enterprise ladder. Exact ranges and template
-              counts are on the product page — this is the commercial shape.
+              Website packages are structured on a Launch / Scale / Enterprise ladder, so you can match scope,
+              support, and rollout complexity to your business stage.
             </p>
           </div>
           <motion.ul
@@ -56,13 +55,14 @@ export default function ProductsCatalogPage() {
                 className={`catalog-sizing__card${tier.highlight ? ' catalog-sizing__card--highlight' : ''}`}
                 variants={fadeUp}
               >
-                <h3 className="catalog-sizing__name">{tier.name}</h3>
-                <p className="catalog-sizing__summary">{tier.summary}</p>
-                <ul className="catalog-sizing__bullets">
-                  {tier.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
+                {tier.image ? (
+                  <div className="catalog-sizing__media">
+                    <img src={tier.image} alt={tier.imageAlt ?? `${tier.name} preview`} loading="lazy" />
+                    <div className="catalog-sizing__overlay">
+                      <h3 className="catalog-sizing__name">{tier.name}</h3>
+                    </div>
+                  </div>
+                ) : null}
               </motion.li>
             ))}
           </motion.ul>

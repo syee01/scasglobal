@@ -1,3 +1,7 @@
+import errorFreeData from '../assets/errorFreeData.png'
+import automatedPass from '../assets/automatedPass.png'
+import traceableRecords from '../assets/traceableRecords.png'
+
 /**
  * Home page copy for the QCX website product.
  */
@@ -80,21 +84,27 @@ export const TESTIMONIALS = [
 export const WEBSITE_SIZING_TIERS = [
   {
     id: 'launch',
-    name: 'Launch',
+    name: 'Error-Free Data',
     summary: 'Lean footprint — one primary locale, core templates, fast time-to-value.',
-    bullets: ['Ideal for a first flagship build', '90-day hypercare typical', 'From low five figures USD (see product page)'],
+    bullets: [],
+    image: errorFreeData,
+    imageAlt: 'Error-free quality data dashboard',
   },
   {
     id: 'scale',
-    name: 'Scale',
+    name: 'Automated Pass/Fail Judgement',
     summary: 'More templates, locales, and integrations as you add regions or always-on campaigns.',
-    bullets: ['CRM / MAP hooks and event taxonomy', 'Extra template packs per product', 'Quarterly roadmap reviews'],
+    bullets: [],
+    image: automatedPass,
+    imageAlt: 'Automated pass fail judgement screen',
     highlight: true,
   },
   {
     id: 'enterprise',
-    name: 'Enterprise',
+    name: 'Traceable Records',
     summary: 'Governance, security coordination, and SLAs for global or regulated programs.',
-    bullets: ['Dedicated squad & response targets', 'Multi-brand or multi-site rollouts', 'Custom commercial — talk to us'],
+    bullets: [],
+    image: traceableRecords,
+    imageAlt: 'Enterprise quality reporting and analytics',
   },
 ]

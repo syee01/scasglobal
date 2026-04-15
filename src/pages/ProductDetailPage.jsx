@@ -1,7 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ComparisonSection } from '../components/landing/ComparisonSection'
-import { BrowserMock } from '../components/product/BrowserMock'
 import { CONTACT } from '../constants/site'
 import { getProductDetail } from '../constants/products'
 import { fadeUp, staggerContainer } from '../motion/variants'
@@ -325,57 +324,7 @@ export default function ProductDetailPage() {
         </section>
       ) : null}
 
-      <section className="section product-context" aria-labelledby="what-heading">
-        <div className="section__inner product-context__grid">
-          <div>
-            <h2 id="what-heading" className="section__title">
-              {d.whatItIs.title}
-            </h2>
-            <p className="section__lead product-context__lead">{d.whatItIs.lead}</p>
-            <ul className="product-context__bullets">
-              {d.whatItIs.bullets.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="product-context__aside">
-            <h3 className="product-context__aside-title">{d.audience.title}</h3>
-            <ul className="product-audience">
-              {d.audience.items.map((item) => (
-                <li key={item.title}>
-                  <strong>{item.title}</strong>
-                  <span>{item.text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <ComparisonSection />
-
-      <section className="section product-site-visual" aria-labelledby="structure-heading">
-        <div className="section__inner product-site-visual__grid">
-          <div>
-            <p className="eyebrow">On the web</p>
-            <h2 id="structure-heading" className="section__title">
-              {d.pageStructure.title}
-            </h2>
-            <p className="section__lead">{d.pageStructure.description}</p>
-            <p className="site-preview-caption">{d.sitePreview.caption}</p>
-          </div>
-          <BrowserMock urlBar={d.sitePreview.urlBar}>
-            <ul className="browser-mock__sitemap">
-              {d.pageStructure.pages.map((p) => (
-                <li key={p.name}>
-                  <span className="browser-mock__page-name">{p.name}</span>
-                  <span className="browser-mock__page-purpose">{p.purpose}</span>
-                </li>
-              ))}
-            </ul>
-          </BrowserMock>
-        </div>
-      </section>
 
       <section className="section product-journeys" aria-labelledby="journeys-heading">
         <div className="section__inner">
@@ -399,29 +348,6 @@ export default function ProductDetailPage() {
               </motion.li>
             ))}
           </motion.ul>
-        </div>
-      </section>
-
-      <section className="section product-split" aria-labelledby="ops-heading">
-        <div className="section__inner product-split__grid">
-          <div>
-            <h2 id="ops-heading" className="section__title">
-              {d.editorExperience.title}
-            </h2>
-            <ul className="product-split__list">
-              {d.editorExperience.items.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className="section__title">{d.techQuality.title}</h2>
-            <ul className="product-split__list">
-              {d.techQuality.items.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-          </div>
         </div>
       </section>
 

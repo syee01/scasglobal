@@ -32,7 +32,12 @@ export function Footer() {
           </div>
         </div>
         <div className="site-footer__bottom">
-          <p>© {year} {COMPANY.name}. All rights reserved.</p>
+          <p className="site-footer__disclaimer">
+            Legal disclaimer: The motion video and selected illustrative images used on this website are
+            AI-generated conceptual visuals for presentation purposes only and do not represent actual client
+            facilities, products, measurements, or outcomes.
+          </p>
+          <p className="site-footer__copyright">© {year} {COMPANY.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>

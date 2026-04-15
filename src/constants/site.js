@@ -12,7 +12,7 @@ export const COMPANY = {
 export const CONTACT = {
   email: 'hello@scasglobals.com',
   phone: '',
-  addressLine1: '1171, Babak Moti, Sungai Bakap',
+  addressLine1: '1171, Badak Moti, Sungai Bakap',
   addressLine2: '14200, Penang, Malaysia',
   hours: 'Mon-Fri, 9:00-18:00 (MYT)',
 }
